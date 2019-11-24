@@ -4,7 +4,9 @@ use std::mem::drop;
 mod linked_list_tail_box;
 mod linked_list_tail_rc;
 mod list_with_mutable_value;
-mod list_with_mutable_tail;
+mod reference_cycle;
+mod reference_cycle_tree;
+
 
 // Custom smart pointer.
 struct MyBox<T>(T);
@@ -97,5 +99,6 @@ fn main() {
     linked_list_tail_box::example();
     linked_list_tail_rc::example();
     list_with_mutable_value::example();
-    list_with_mutable_tail::example();
+    reference_cycle::example();
+    reference_cycle_tree::example();
 }
